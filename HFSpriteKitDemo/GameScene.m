@@ -13,6 +13,19 @@
     SKLabelNode *_label;
 }
 
+- (instancetype)initWithSize:(CGSize)size{
+    if (self = [super initWithSize:size]) {
+        self.backgroundColor = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+        
+        SKSpriteNode *player = [SKSpriteNode spriteNodeWithImageNamed:@"player"];
+        
+        player.position = CGPointMake(player.size.width / 2, KMainScreenHeight / 2);
+        
+        [self addChild:player];
+    }
+    return self;
+}
+
 - (void)didMoveToView:(SKView *)view {
     // Setup your scene here
     
