@@ -53,6 +53,7 @@
     [skView presentScene:scene];
 }
 
+#pragma mark-
 - (BOOL)shouldAutorotate {
     return YES;
 }
